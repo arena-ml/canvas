@@ -1,5 +1,3 @@
-/.idea
-/.lighthouseci
 /.vscode
 /build
 
@@ -210,10 +208,10 @@ $RECYCLE.BIN/
 # https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
 
 .yarn/*
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
+# !.yarn/releases
+# !.yarn/plugins
+# !.yarn/sdks
+# !.yarn/versions
 
 # if you are NOT using Zero-installs, then:
 # comment the following lines

@@ -1,0 +1,59 @@
+{
+    "ci": {
+        "collect": {
+            "numberOfRuns": 1,
+            "staticDistDir": "./build"
+        },
+        "assert": {
+            "preset": "lighthouse:recommended",
+            "assertions": {
+                "uses-rel-preload": "off",
+                "render-blocking-resources": "off",
+                "max-potential-fid": "off",
+                "first-meaningful-paint": "off",
+                "first-contentful-paint": "off",
+                "valid-source-maps": "off",
+                "unused-javascript": "off",
+                "unused-css-rules": "off",
+                "themed-omnibox": "off",
+                "splash-screen": "off",
+                "service-worker": "off",
+                "meta-description": "off",
+                "maskable-icon": "off",
+                "apple-touch-icon": "off",
+                "content-width": "off",
+                "csp-xss": "off",
+                "legacy-javascript": "off",
+                "non-composited-animations": "off",
+                "speed-index": "off",
+                "errors-in-console": "off",
+                "largest-contentful-paint": [
+                    "warn",
+                    {
+                        "minScore": 0.2
+                    }
+                ],
+                "interactive": [
+                    "warn",
+                    {
+                        "minScore": 0.6
+                    }
+                ],
+                "categories:performance": [
+                    "warn",
+                    {
+                        "aggregationMethod": "optimistic",
+                        "minScore": 0.5
+                    }
+                ],
+                "categories:accessibility": [
+                    "warn",
+                    {
+                        "aggregationMethod": "optimistic",
+                        "minScore": 0.8
+                    }
+                ]
+            }
+        }
+    }
+}

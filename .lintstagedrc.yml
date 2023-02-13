@@ -1,0 +1,3 @@
+'*': prettier --ignore-unknown --write
+# @todo Enable after fixing linter errors
+# '*.{js,jsx,ts,tsx}': yarn eslint --ignore-path .prettierignore --max-warnings 0
