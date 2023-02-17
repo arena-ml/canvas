@@ -5,7 +5,7 @@ MODULE_CAP=${MODULE^}
 
 cat <<EOF
 import axios, {AxiosResponse} from 'axios';
-import {${MODULE_CAP}State, ${MODULE_CAP}Acts} from 'data/$MODULE';
+import {${MODULE_CAP}State, ${MODULE_CAP}Acts} from '~/data/$MODULE';
 import {call, put} from 'redux-saga/effects';
 import {PayloadAction} from "@reduxjs/toolkit";
 

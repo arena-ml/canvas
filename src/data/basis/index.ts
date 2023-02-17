@@ -1,29 +1,28 @@
-#!/bin/bash
-
-MODULE=$1
-MODULE_CAP=${MODULE^}
-
-cat <<EOF
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-export interface ${MODULE_CAP}State {
+export interface BasisState {
     value: number;
     error: string;
     updated: number;
+    data : BasisData[];
+}
+
+export interface BasisData {
+    id: number;
 }
 
 const initialState = {
     value: 0,
     error: '',
     updated: 0
-} as ${MODULE_CAP}State
+} as BasisState
 
 
-export const ${MODULE_CAP}Slice = createSlice({
-    name: '${MODULE}',
+export const BasisSlice = createSlice({
+    name: 'basis',
     initialState,
     reducers: {
-        update${MODULE_CAP}State: (state, p: PayloadAction<Partial<${MODULE_CAP}State>>) => {
+        updateBasisState: (state, p: PayloadAction<Partial<BasisState>>) => {
             Object.assign(state, p.payload)
         },
         getValue: (state, p: PayloadAction<{ id: number }>) => {},
@@ -40,7 +39,6 @@ export const ${MODULE_CAP}Slice = createSlice({
 });
 
 
-export const ${MODULE_CAP}Acts = ${MODULE_CAP}Slice.actions;
+export const BasisActs = BasisSlice.actions;
 
-export const ${MODULE_CAP}Reducer = ${MODULE_CAP}Slice.reducer;
-EOF
+export const BasisReducer = BasisSlice.reducer;

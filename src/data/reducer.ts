@@ -1,9 +1,9 @@
-import {combineReducers} from '@reduxjs/toolkit' // import-reducer-above : don't delete this comment
+import { combineReducers } from '@reduxjs/toolkit' // import-reducer-above : don't delete this comment
+import { PipelineReducer } from '~/data/pipeline'
+import {PipelineReducer} from '~/data/pipeline'
+import {BasisReducer} from '~/data/basis'
 // import-reducer-above : don't delete this comment
 
-// import { AuthReducer } from '~/data/auth';
-// import { LogsReducer } from '~/data/logs';
-// import { MetricReducer } from '~/data/metric';
 
 export const rootReducerObj = {
     // cluster: clusterReducer,
@@ -11,7 +11,10 @@ export const rootReducerObj = {
     // metric: MetricReducer,
     // logs: LogsReducer,
     // auth: AuthReducer,
-    // add-reducer-above : don't delete this comment
+    pipeline: PipelineReducer,
+    pipeline: PipelineReducer,
+    basis: BasisReducer,
+// add-reducer-above : don't delete this comment
 }
 
 export const rootReducer = combineReducers(rootReducerObj)
